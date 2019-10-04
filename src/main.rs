@@ -1,15 +1,10 @@
 extern crate rustc_serialize;
 use rustc_serialize::hex::FromHex;
 use rustc_serialize::base64::{ToBase64, STANDARD};
-use std::error::Error;
 
 #[derive(Debug)]
 pub enum LogicError {
 	InvalidLengthCheck,
-}
-
-fn main() {
-    println!("Let's Crack some Crypto Challenges!");
 }
 
 fn xor(data: &[u8], other_data: &[u8]) -> Result<Vec<u8>, LogicError> {
